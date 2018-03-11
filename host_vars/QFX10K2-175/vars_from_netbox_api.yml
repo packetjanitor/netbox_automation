@@ -1,3 +1,0 @@
-vars_from_netbox_api:
-- address: 172.25.90.175/32
-  interface: em0

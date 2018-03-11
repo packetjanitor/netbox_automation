@@ -41,35 +41,35 @@ prefixes:
 # devices you want to create. the devices are assigned to the tenant.
 devices: 
     - name: QFX5110-32Q-169
-      device_type: qfx5100-48s-6q
+      device_type: qfx5110-32q
       device_role: junos-spine
       site: dc1
     - name: QFX5110-32Q-170
-      device_type: qfx5100-48s-6q
+      device_type: qfx5110-32q
       device_role: junos-spine
       site: dc1
     - name: QFX5110-32Q-171
-      device_type: qfx5100-48s-6q
+      device_type: qfx5110-32q
       device_role: junos-spine
       site: dc1
     - name: QFX5110-32Q-172
-      device_type: qfx5100-48s-6q
+      device_type: qfx5110-32q
       device_role: junos-leaf
       site: dc1
     - name: QFX5110-32Q-174
-      device_type: qfx5100-48s-6q
+      device_type: qfx5110-32q
       device_role: junos-leaf
       site: dc1
     - name: QFX5110-32Q-175
-      device_type: qfx5100-48s-6q
+      device_type: qfx5110-32q
       device_role: junos-leaf
       site: dc1
     - name: QFX5110-32Q-188
-      device_type: qfx5100-48s-6q
+      device_type: qfx5110-32q
       device_role: junos-leaf
       site: dc1
     - name: QFX5110-32Q-189
-      device_type: qfx5100-48s-6q
+      device_type: qfx5110-32q
       device_role: junos-leaf
       site: dc1
     
@@ -77,138 +77,138 @@ devices:
 management_addresses: 
     - ip: 172.25.45.169
       device: QFX5110-32Q-169
-      interface: vme0
+      interface: em0
       mgmt_only: True
     - ip: 172.25.45.170
       device: QFX5110-32Q-170
-      interface: vme0
+      interface: em0
       mgmt_only: True
     - ip: 172.25.45.171
       device: QFX5110-32Q-171
-      interface: vme0
+      interface: em0
       mgmt_only: True
     - ip: 172.25.45.172
       device: QFX5110-32Q-172
-      interface: vme0
+      interface: em0
       mgmt_only: True
     - ip: 172.25.45.174
       device: QFX5110-32Q-174
-      interface: vme0
+      interface: em0
       mgmt_only: True
     - ip: 172.25.45.175
       device: QFX5110-32Q-175
-      interface: vme0
+      interface: em0
       mgmt_only: True
     - ip: 172.25.45.188
       device: QFX5110-32Q-188
-      interface: vme0
+      interface: em0
       mgmt_only: True
     - ip: 172.25.45.189
       device: QFX5110-32Q-189
-      interface: vme0
+      interface: em0
       mgmt_only: True
 
 # Other ip addresses you want to create. the IP addresses are assigned to the tenant.
 ip_addresses:
     - ip: 100.169.0.1/16
       device: QFX5110-32Q-169
-      interface: xe-0/0/5
+      interface: xe-0/0/5:0
     - ip: 100.170.0.1/16
       device: QFX5110-32Q-170
-      interface: xe-0/0/5
+      interface: xe-0/0/5:0
     - ip: 100.171.0.1/16
       device: QFX5110-32Q-171
-      interface: xe-0/0/5
+      interface: xe-0/0/5:0
     - ip: 100.172.0.1/16
       device: QFX5110-32Q-172
-      interface: xe-0/0/3
+      interface: xe-0/0/3:0
     - ip: 100.174.0.1/16
       device: QFX5110-32Q-174
-      interface: xe-0/0/3
+      interface: xe-0/0/3:0
     - ip: 100.175.0.1/16
       device: QFX5110-32Q-175
-      interface: xe-0/0/3
+      interface: xe-0/0/3:0
     - ip: 100.188.0.1/16
       device: QFX5110-32Q-188
-      interface: xe-0/0/3
+      interface: xe-0/0/3:0
     - ip: 100.189.0.1/16
       device: QFX5110-32Q-189
-      interface: xe-0/0/3
+      interface: xe-0/0/3:0
 
 # define how the interfaces are connected (physical topology). 
 interface_connections:
     - device_a: QFX5110-32Q-169
-      interface_a: xe-0/0/0
+      interface_a: et-0/0/0
       device_b: QFX5110-32Q-172
-      interface_b: xe-0/0/0
+      interface_b: et-0/0/0
       connection_status: Connected
     - device_a: QFX5110-32Q-169
-      interface_a: xe-0/0/1
+      interface_a: et-0/0/1
       device_b: QFX5110-32Q-174
-      interface_b: xe-0/0/0
+      interface_b: et-0/0/0
       connection_status: Connected
     - device_a: QFX5110-32Q-169
-      interface_a: xe-0/0/2
+      interface_a: et-0/0/2
       device_b: QFX5110-32Q-175
-      interface_b: xe-0/0/0
+      interface_b: et-0/0/0
       connection_status: Connected
     - device_a: QFX5110-32Q-169
-      interface_a: xe-0/0/3
+      interface_a: et-0/0/3
       device_b: QFX5110-32Q-188
-      interface_b: xe-0/0/0
+      interface_b: et-0/0/0
       connection_status: Connected
     - device_a: QFX5110-32Q-169
-      interface_a: xe-0/0/4
+      interface_a: et-0/0/4
       device_b: QFX5110-32Q-189
-      interface_b: xe-0/0/0
+      interface_b: et-0/0/0
       connection_status: Connected
     - device_a: QFX5110-32Q-170
-      interface_a: xe-0/0/0
+      interface_a: et-0/0/0
       device_b: QFX5110-32Q-172
-      interface_b: xe-0/0/1
+      interface_b: et-0/0/1
       connection_status: Connected
     - device_a: QFX5110-32Q-170
-      interface_a: xe-0/0/1
+      interface_a: et-0/0/1
       device_b: QFX5110-32Q-174
-      interface_b: xe-0/0/1
+      interface_b: et-0/0/1
       connection_status: Connected
     - device_a: QFX5110-32Q-170
-      interface_a: xe-0/0/2
+      interface_a: et-0/0/2
       device_b: QFX5110-32Q-175
-      interface_b: xe-0/0/1
+      interface_b: et-0/0/1
       connection_status: Connected
     - device_a: QFX5110-32Q-170
-      interface_a: xe-0/0/3
+      interface_a: et-0/0/3
       device_b: QFX5110-32Q-188
-      interface_b: xe-0/0/1
+      interface_b: et-0/0/1
       connection_status: Connected
     - device_a: QFX5110-32Q-170
-      interface_a: xe-0/0/4
+      interface_a: et-0/0/4
       device_b: QFX5110-32Q-189
-      interface_b: xe-0/0/1
+      interface_b: et-0/0/1
       connection_status: Connected
     - device_a: QFX5110-32Q-171
-      interface_a: xe-0/0/0
+      interface_a: et-0/0/0
       device_b: QFX5110-32Q-172
-      interface_b: xe-0/0/2
+      interface_b: et-0/0/2
       connection_status: Connected
     - device_a: QFX5110-32Q-171
-      interface_a: xe-0/0/1
+      interface_a: et-0/0/1
       device_b: QFX5110-32Q-174
-      interface_b: xe-0/0/2
+      interface_b: et-0/0/2
       connection_status: Connected
     - device_a: QFX5110-32Q-171
-      interface_a: xe-0/0/2
+      interface_a: et-0/0/2
       device_b: QFX5110-32Q-175
-      interface_b: xe-0/0/2
+      interface_b: et-0/0/2
       connection_status: Connected
     - device_a: QFX5110-32Q-171
-      interface_a: xe-0/0/3
+      interface_a: et-0/0/3
       device_b: QFX5110-32Q-188
-      interface_b: xe-0/0/2
+      interface_b: et-0/0/2
       connection_status: Connected
     - device_a: QFX5110-32Q-171
-      interface_a: xe-0/0/4
+      interface_a: et-0/0/4
       device_b: QFX5110-32Q-189
-      interface_b: xe-0/0/2
+      interface_b: et-0/0/2
       connection_status: Connected

@@ -1,0 +1,5 @@
+vars_from_netbox_api:
+- address: 100.171.0.1/16
+  interface: xe-0/0/5
+- address: 172.25.45.171/32
+  interface: vme0
